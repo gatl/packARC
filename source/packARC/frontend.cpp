@@ -36,7 +36,7 @@ int list_format = 0;
 #if !defined(SFX_STUB)
 bool make_sfx = false;
 #endif
-bool pause_f = true;
+bool pause_f = false;
 
 /* -----------------------------------------------
 	main-function
@@ -600,7 +600,7 @@ void show_help_exit( char* my_name ) {
 	fprintf( MSGOUT, " -sl  (with l) simple list format\n" );
 	fprintf( MSGOUT, " -sm  (with l) MultiArc list format\n" );
 	fprintf( MSGOUT, " -csv (with l) CSV list format\n" );
-	fprintf( MSGOUT, " -np  no pause after after processing\n" );
+	fprintf( MSGOUT, " -np  no pause after after processing (ignored)\n" );
 	fprintf( MSGOUT, "\n" );
 	#if !defined(SFX_STUB)
 	fprintf( MSGOUT, "examples: %s a archive.%s *.jpg\n", my_name, PJA_ARC_EXT );
