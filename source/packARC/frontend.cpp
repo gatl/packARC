@@ -353,7 +353,7 @@ void process_files( char command, char* archive, int num_files, char** files ) {
 			// display summary
 			if ( error_count > 0 ) {
 				fprintf( MSGOUT, "-> ERROR updating archive! (%s)\n", pja_get_current_status() );
-				return;
+				exit( 1 );
 			}
 			else fprintf( MSGOUT, "-> archive successfully converted\n" );
 			break;
@@ -418,7 +418,7 @@ void process_files( char command, char* archive, int num_files, char** files ) {
 		default:
 			fprintf( MSGOUT, "unknown command: '%c', application ERROR!\n", command );
 			pja_close_archive();
-			return ;
+			exit ( 1 );
 	}
 	
 	// list errors if any, otherwise we're done
@@ -430,6 +430,7 @@ void process_files( char command, char* archive, int num_files, char** files ) {
 			if ( file_status[ i ] != NULL )
 				fprintf( MSGOUT, "%s (%s)\n", files[ i ], file_status[ i ] );
 		}
+    exit( 1 );
 	}
 	
 	return;
