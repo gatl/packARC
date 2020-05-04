@@ -119,9 +119,9 @@ int main( int argc, char** argv )
 		}
 		if ( argc > 0 ) {
 			// if there is (still) more than one file, or the first file
-			// is not a proper archive, create a new SFX archive
+			// is not a proper archive, create a new archive
 			command = 'a';
-			make_sfx = true;
+			make_sfx = false;
 			archive = unique_filename( (*argv), PJA_SFX_EXT );
 			// rest of parameters = filelist
 			num_files = argc;
