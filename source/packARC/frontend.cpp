@@ -122,7 +122,7 @@ int main( int argc, char** argv )
 			// is not a proper archive, create a new archive
 			command = 'a';
 			make_sfx = false;
-			archive = unique_filename( (*argv), PJA_SFX_EXT );
+			archive = unique_filename( (*argv), PJA_ARC_EXT );
 			// rest of parameters = filelist
 			num_files = argc;
 			filelist = argv;
