@@ -911,8 +911,7 @@ INTERN inline bool insert_file( pja_archive* archive, pja_file* file, char* file
 	----------------------------------------------- */
 INTERN inline bool extract_file( pja_archive* archive, pja_file* file, char* filepath ) {
 	FILE* fp = archive->fileptr;
-	char* temp_fn = unique_tempname( archive->filename, "x.tmp" );
-	
+	char* temp_fn = unique_tempname( filepath, "x.tmp" );
 	
 	// unstore compressed file to temp file
 	fseek( fp, file->file_address, SEEK_SET );
